@@ -1,0 +1,32 @@
+/*
+ * VARIZBLES
+** =============================================================== */
+
+/* Color and DarkTheme */
+:root{
+	--color-primary:			#06B131;
+	--color-primary-variant:	#069E2D;
+	--color-secondary:			#058E3F;
+	--color-secondary-variant:	#04773B;
+	--color-background:			#F1F1F1;
+	--color-background-Menu:	#fafafa;
+	--color-error:				#FF0000;
+	--color-primary-hover:		#B6EA20;
+	--color-on-primary:			#000000;
+	--color-on-secondary:		#000000;
+	--color-on-background:		#000000;
+	--color-on-error:			#000000;
+	--color-on-primary-hover:	#000000;
+	/* Var couleur logo */
+	--color-bleu:				#243C95;
+	--color-noir:				#0D0B0C;
+	--color-red:				#A81F23;
+	--color-jaune:				#DFC142;
+	--color-vert:				#298C63;
+}
+
+
+/* Type */
+
+$font-text: 'Rokkitt', serif;
+$font-title:"SometypeMono", sans-serif;

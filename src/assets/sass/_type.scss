@@ -1,0 +1,82 @@
+/*
+ * TYPOGRAPHIES
+** =============================================================== */
+
+@use "_var.scss" as v;
+
+/* Import font-face */
+@font-face {
+    font-family: 'SometypeMono';
+    font-display: swap;
+    src: url(../fonts/SometypeMono-Bold.woff2) format("woff2"), url(../fonts/SometypeMono-Bold.woff) format("woff");
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'SometypeMono';
+    font-display: swap;
+    src: url(../fonts/SometypeMono-BoldItalic.woff2) format("woff2"), url(../fonts/SometypeMono-BoldItalic.woff) format("woff");
+    font-weight: bold;
+    font-style:  italic;
+}
+@font-face {
+    font-family: 'SometypeMono';
+    font-display: swap;
+    src: url(../fonts/SometypeMono-Regular.woff2) format("woff2"), url(../fonts/SometypeMono-Regular.woff) format("woff");
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'SometypeMono';
+    font-display: swap;
+    src: url(../fonts/SometypeMono-RegularItalic.woff2) format("woff2"), url(../fonts/SometypeMono-RegularItalic.woff) format("woff");
+    font-weight: normal;
+    font-style:  italic;
+}
+
+
+.body{
+    font-family: v.$font-text;
+    font-size: 1em;
+    line-height: 1.5;
+    color: var(--color-on-background);
+    background-color: var(--color-background);
+}
+
+/* Styles des TITRES */
+.title{
+    font-size: 1.8888888888888888em;
+    font-family: v.$font-title;
+}
+.title--h2{
+    font-size: 1.5em;
+}
+.title--h3{
+    font-size: 1.2222222222222223em;
+}
+
+/* Main */
+.bold{
+    font-weight: bold;
+}
+
+.figure__legende{
+    text-align: right;
+    font-size: 0.8em;
+}
+
+@media screen and (min-width: 1440px) {
+    .body{
+        font-size: 1.3em; 
+    }
+    .title{
+        font-size:3.1666666666666665em;
+    }
+    .title--h2{
+        font-size: 2.388888888888889em;
+    }
+    .title--h3{
+        font-size: 1.7777777777777777em;
+    }
+    .figure__legende{
+        text-align: left;
+    }
+}
