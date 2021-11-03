@@ -6,28 +6,28 @@
 
 /* Import font-face */
 @font-face {
-    font-family: 'SometypeMono';
+    font-family: 'Roboto';
     font-display: swap;
-    src: url(../fonts/SometypeMono-Bold.woff2) format("woff2"), url(../fonts/SometypeMono-Bold.woff) format("woff");
+    src: url(../fonts/Roboto-Bold.ttf) format("ttf");
     font-weight: bold;
 }
 @font-face {
-    font-family: 'SometypeMono';
+    font-family: 'Roboto';
     font-display: swap;
-    src: url(../fonts/SometypeMono-BoldItalic.woff2) format("woff2"), url(../fonts/SometypeMono-BoldItalic.woff) format("woff");
+    src: url(../fonts/Roboto-BoldItalic.ttf) format("ttf");
     font-weight: bold;
     font-style:  italic;
 }
 @font-face {
-    font-family: 'SometypeMono';
+    font-family: 'Roboto';
     font-display: swap;
-    src: url(../fonts/SometypeMono-Regular.woff2) format("woff2"), url(../fonts/SometypeMono-Regular.woff) format("woff");
+    src: url(../fonts/Roboto-Regular.ttf) format("ttf");
     font-weight: normal;
 }
 @font-face {
-    font-family: 'SometypeMono';
+    font-family: 'Roboto';
     font-display: swap;
-    src: url(../fonts/SometypeMono-RegularItalic.woff2) format("woff2"), url(../fonts/SometypeMono-RegularItalic.woff) format("woff");
+    src: url(../fonts/Roboto-Italic.ttf) format("ttf");
     font-weight: normal;
     font-style:  italic;
 }

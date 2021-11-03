@@ -46,9 +46,15 @@ const html = () => {
 const fonts = () => {
 	return gulp.src([
 		"./src/assets/fonts/**/*.woff",
-		"./src/assets/fonts/**/*.woff2"
+		"./src/assets/fonts/**/*.woff2",
+		"./src/assets/fonts/**/*.ttf"
 	])
 		.pipe(gulp.dest('./dist/assets/fonts/'));
+}
+
+const sound = () => {
+	return gulp.src('./src/assets/sound/**/*.mp3')
+		.pipe(gulp.dest( './dist/assets/sound/'));
 }
 
 const watchFiles = () => {
@@ -56,13 +62,16 @@ const watchFiles = () => {
 	gulp.watch("./src/assets/js/**/*.js", javascript);
 	gulp.watch([
 		"./src/assets/fonts/**/*.woff",
-		"./src/assets/fonts/**/*.woff2"
+		"./src/assets/fonts/**/*.woff2",
+		"./src/assets/fonts/**/*.ttf"
 	], fonts);
 	gulp.watch([
 		"./src/assets/images/**/*.jpg",
 		"./src/assets/images/**/*.png",
-		"./src/assets/images/**/*.gif"
+		"./src/assets/images/**/*.gif",
+		"./src/assets/images/**/*.svg"
 	], compressImages);
+	gulp.watch("./src/assets/sound/**/*.mp3", sound)
 	gulp.watch("./src/*.html", gulp.series(html, browserReload));
 }
 
@@ -85,7 +94,8 @@ const compressImages = () => {
 	return gulp.src([
 		"./src/assets/images/**/*.jpg",
 		"./src/assets/images/**/*.png",
-		"./src/assets/images/**/*.gif"
+		"./src/assets/images/**/*.gif",
+		"./src/assets/images/**/*.svg"
 	  ])
 	 .pipe(imagemin({
 		 progressive: true,
@@ -94,7 +104,7 @@ const compressImages = () => {
 	 .pipe(gulp.dest('./dist/assets/images/'))
 }
 
-const build = gulp.series(html, styles, javascript, compressImages, fonts);
+const build = gulp.series(html, styles, javascript, compressImages, fonts, sound);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 const compress = gulp.series(compressImages);
 
