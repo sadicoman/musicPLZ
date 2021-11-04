@@ -75,6 +75,8 @@ playBtn.addEventListener('click', (e) =>{
     rotation: '30deg'
   });
   disc.classList.add('discPlay');
+  mySound = new sound("../assets/sound/pentatonix-making-christmas-from-the-nightmare-before-christmas-official-video.mp3");
+  mySound.play();
 });
 
 stopBtn.addEventListener('click', (e) =>{
@@ -84,4 +86,120 @@ stopBtn.addEventListener('click', (e) =>{
     rotation: '0deg'
   });
   disc.classList.remove('discPlay');
+  mySound.stop();
 });
+
+/*----- ANNIMATION TOURNE DISQUE -----*/
+/*-----          MOBILE          -----*/
+let playBtnM = document.querySelector('.play--mobile');
+let aiguilleM = document.querySelector('.aiguille--mobile');
+let discM = document.querySelector('.disc--mobile');
+let stopBtnM = document.querySelector('.stop--mobile');
+
+const tl1M = gsap.timeline({});
+playBtnM.addEventListener('click', (e) =>{
+  mySound = new sound("../assets/sound/pentatonix-making-christmas-from-the-nightmare-before-christmas-official-video.mp3");
+  mySound.play();  
+  e.preventDefault();
+  
+  tl1M.set(aiguilleM,{
+    transformOrigin: '12px 114px'
+  });
+  tl1M.to(aiguilleM,{
+    duration: 1.5,
+    rotation: '30deg'
+  });
+  discM.classList.add('discPlay');
+  
+});
+
+stopBtnM.addEventListener('click', (e) =>{
+  e.preventDefault();
+  tl1M.to(aiguilleM,{
+    duration: 1.5,
+    rotation: '0deg'
+  });
+  discM.classList.remove('discPlay');
+  mySound.stop();
+});
+
+
+/*----- ANNIMATION FOOTER -----*/
+const grid = document.querySelector('.footer__music');
+
+// taille écran
+let windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
+function setWindowSize(){
+  windowWidth = window.innerWidth;
+  windowHeight = window.innerHeight;
+
+  let n = windowWidth / 7;
+    let hue = 0;
+    for( let i=1; i <= n; i++){
+
+        hue += 360 / n;
+        const particule = document.createElement('div');
+        particule.classList.add("music__el");
+        particule.style.backgroundColor = 'hsl(' + hue + ',100%,50%)';
+        let indiceLeft = i * 7 ;
+        let indiceAnim = i * 15;
+        particule.style.left = indiceLeft + 'px' ;
+        particule.style.animationDelay = indiceAnim + 'ms';
+        grid.appendChild( particule );
+
+    }   
+};
+
+
+// prend la taille de l'écran lors d'un resize
+window.addEventListener('resize', setWindowSize());
+
+// remise a 0 de la grille
+grid.innerHTML = "";
+let n = windowWidth / 7;
+let hue = 0;
+for( let i=0; i <= n; i++){
+
+    hue += 360 / n;
+    const particule = document.createElement('div');
+    particule.classList.add("music__el");
+    particule.style.backgroundColor = 'hsl(' + hue + ',100%,50%)';
+    let indiceLeft = i * 7 ;
+    let indiceAnim = i * 15;
+    particule.style.left = indiceLeft + 'px' ;
+    particule.style.animationDelay = indiceAnim + 'ms';
+    grid.appendChild( particule );
+
+}    
+
+
+
+//------------------------
+// je suis allé manger :)
+//------------------------
+
+
+
+/*----- FUNCTION SOUND -----*/
+var mySound;
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+      this.sound.play();
+    }
+    this.stop = function(){
+      this.sound.pause();
+    }
+}
+
+
+
+
+// mySound = new sound("../assets/sound/voix/narrateur-1.mp3");
+// mySound.play();

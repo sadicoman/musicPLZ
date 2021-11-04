@@ -40,12 +40,19 @@
     color: var(--color-on-background);
     background-color: var(--color-background);
 }
-
+.footer__lien{
+    font-size: 0.8em;
+    color: var(--color-on-background-footer);
+}
+.footer__lien:hover{
+    color: var(--color-secondary);
+}
 /* Styles des TITRES */
 .title{
     font-size: 3em;
     font-family: v.$font-title;
     color: var(--color-secondary);
+    line-height: 1.2;
 }
 .title--niveau2{
     font-size: 1.5em;

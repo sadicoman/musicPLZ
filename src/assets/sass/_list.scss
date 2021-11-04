@@ -38,12 +38,15 @@
 body[data-menu] .nav__el {
     animation: lien 2s ease forwards;
     &--propos{
-        animation: lien2 2s ease forwards;
-        animation-delay: 1.5s;
+        animation: lien2 1.5s ease forwards;
+        animation-delay: 1s;
     }
     &--artistes{
-        animation-delay: 3s;
+        animation-delay: 1.8s;
     }
+}
+body[data-menu] .footer{
+    display: none;
 }
 @keyframes lien{
     from{

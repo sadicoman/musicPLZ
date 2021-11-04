@@ -5,6 +5,8 @@
 /*********** LOADER ***********/
 .loader{
     display: none;
+    position: absolute;
+    z-index: 9999;
 }
 .out .loader{
     display: grid;
@@ -46,7 +48,10 @@
 }
 
 /*********** MENU BURGER ***********/
-
+.header{
+    max-width: 320px;
+    margin: auto;
+}
 .container{
     width: 40px;
     height: 35px;
@@ -61,7 +66,7 @@
     border-radius: 4px;
 }
 .burg__h{
-    animation: burgerH 1s ease;
+    animation: burgerH 0.8s ease;
 }
 @keyframes burgerH{
 // 0%{
@@ -74,7 +79,7 @@
     }
 }
 .burg__b{
-    animation: burgerB 1s ease;
+    animation: burgerB 0.8s ease;
 }
 @keyframes burgerB{
 // 0%{
@@ -156,7 +161,7 @@
     background-color:  var(--color-primary);
     text-align: center;
     display: inline-block;
-    font-size: 1.2em;
+    font-size: 1em;
     text-transform: uppercase;
     position: relative;
     will-change: transform;
@@ -208,37 +213,71 @@
     100%{
       transform:rotate(360deg);
     }
-  }
-  
-  svg{
+}
+
+.tourneDisque--Grand{
     width:500px;
     position: relative;
-  }
-  .aiguille{
+    display: none;
+}
+.aiguille{
     position: absolute;
     top: 0px;
     z-index: 100;
-  }
-  
-  .disc{
+}
+
+.disc{
     position: absolute;
     top: 0px;
     margin: auto;
     z-index: 1;
     transform-origin: 50% 58.5%;
-  }
-  
-  .discPlay{
+}
+.disc--mobile{
+    transform-origin: 48.2% 50.8%;
+}
+
+.discPlay{
     animation: circle 10s linear infinite forwards;
     animation-delay: 0.8s;
-  }
+}
+/*********** MAIN ***********/
+.main{
+    max-width: 320px;
+    margin: auto;
+}
 
-
-
-
-
-
-
+/*********** FOOTER ***********/
+.footer__div{
+    background-color:var(--color-background-footer) ;
+}
+.music__el{
+    // background-color: var(--color-jaune);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 5px;
+    height:22px;
+    margin-right: 2px;
+    animation : sound 0.9s ease-in-out infinite alternate;
+}
+// .footer__music{
+//     background: linear-gradient(89.99deg, #2A3086 0.32%, #A81817 34.58%, #DEBF33 66.25%, #417E52 99.99%);
+// }
+@keyframes sound {
+    0% {
+    //    opacity: .35;
+        height: 22px; 
+    }
+    100% {
+        // opacity: 1;       
+        height: 3px;        
+    }
+}
+.footer__liste{
+    max-width: 320px;
+    margin: auto;
+}
 
 
 
