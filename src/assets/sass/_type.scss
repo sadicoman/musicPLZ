@@ -43,13 +43,14 @@
 
 /* Styles des TITRES */
 .title{
-    font-size: 1.8888888888888888em;
+    font-size: 3em;
     font-family: v.$font-title;
+    color: var(--color-secondary);
 }
-.title--h2{
+.title--niveau2{
     font-size: 1.5em;
 }
-.title--h3{
+.title--niveau3{
     font-size: 1.2222222222222223em;
 }
 

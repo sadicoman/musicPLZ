@@ -2,9 +2,78 @@
  * LISTES
 ** =============================================================== */
 
-// MENU 
 
-
+/*********** MENU BURGER ***********/
+.nav {
+    display: none;
+    overflow: hidden;
+}
+.navBtn {
+    position: relative;
+    z-index: 99;
+    justify-self: end;
+    background-color: inherit;
+    // width: 40px;
+    // height: 40px;
+    border: none;
+    // z-index: 3;
+    cursor: pointer;
+    // color: var(--color-on-primary);
+    padding: 0;
+}
+.nav__liste {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: auto;
+    text-align: center;
+}
+.nav__el {
+    text-align: center;
+    opacity: 0;
+}
+// body[data-menu] .nav__el {
+//     opacity: 1;
+// }
+body[data-menu] .nav__el {
+    animation: lien 2s ease forwards;
+    &--propos{
+        animation: lien2 2s ease forwards;
+        animation-delay: 1.5s;
+    }
+    &--artistes{
+        animation-delay: 3s;
+    }
+}
+@keyframes lien{
+    from{
+        transform: translateX(-50px);
+        opacity: 0;
+    } to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes lien2{
+    from{
+        transform: translateX(50px);
+        opacity: 0;
+    } to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+body[data-menu] .nav {
+    background-color: var(--color-background);
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    z-index: 2;
+}
 
 
 @media screen and (min-width: 1440px) {

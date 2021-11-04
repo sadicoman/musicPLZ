@@ -7,13 +7,17 @@
 	<title>Projet MusicPLZ</title>
 	<!-- CSS -->
 	<link href="assets/css/main.css" rel="stylesheet" >
+	<!-- GSAP NET -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script> -->
+	<!-- GSAP NET PERSO -->
+	<script src="https://francois-szczepkowski.be/gsap/gsap.min.js"></script>
+	<script src="https://francois-szczepkowski.be/gsap/ScrollTrigger.min.js"></script>
 	<!-- GSAP -->
-	<script src="assets/js/gsap/gsap.min.js" defer></script>
-	<script src="assets/js/gsap/ScrollTrigger.min.js" defer></script>
+	<!-- <script src="assets/js/modules/gsap/gsap.min.js"></script>
+	<script src="assets/js/modules/gsap/ScrollTrigger.min.js"></script> -->
 	<!-- Javascript -->
 	<script src="assets/js/main.min.js" defer></script>
-
-	
 
 	<!-- Google -->
 	<meta name="title" content="François Szczepkowski - ">
@@ -60,22 +64,131 @@
 			<div class="loader__bar loader__bar--jaune"></div>
 			<div class="loader__bar loader__bar--vert"></div>
 		</div>
-		<nav class="nav">
-			<ul class="nav__liste">
-				<li class="nav__el">
-					<a href="index.html" class="nav__lien">Home</a>
-				</li>
-				<li class="nav__el">
-					<a href="page2.html" class="nav__lien">page2</a>
-				</li>
-				<li class="nav__el">
-					<a href="page3.html" class="nav__lien">page3</a>
-				</li>
-			</ul>
-		</nav>
+		<div class="header">
+			<div>
+				<a class="logo" href="index.html">
+					<img class="logo--img" src="assets/images/logo.svg" alt="Logo MusicPlz">
+				</a>
+			</div>
+			<nav class="nav">
+				<ul class="nav__liste">
+					<li class="nav__el">
+						<a href="index.html" class="nav__lien">Accueil</a>
+					</li>
+					<li class="nav__el nav__el--propos">
+						<a href="apropos.html" class="nav__lien">à propos</a>
+					</li>
+					<li class="nav__el nav__el--artistes">
+						<a href="artistes.html" class="nav__lien">Les artistes</a>
+					</li>
+				</ul>
+			</nav>
+			<button class="navBtn">
+				<div class="container">
+					<div class="burg burg__h"></div>
+					<div class="burg burg__m"></div>
+					<div class="burg burg__b"></div>
+				</div>
+			</button>	
+		</div>
+		
 	</header>
 	<main class="main">
-		<h1>Bienvenue sur la Home Page</h1>
+		<!-- <h1>Bienvenue sur la Home Page</h1> -->
+		<svg width="320" height="235" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g clip-path="url(#a)">
+			  <path d="M.00003052 235H321V0L.00003053-1e-8 .00003052 235Z" fill="#564C89"/>
+			  <path d="M78 156c0-9.941-7.835-18-17.5-18S43 146.059 43 156s7.835 18 17.5 18S78 165.941 78 156Z" fill="#9180E6"/>
+			  <path class="aiguille" d="M48 155.671C48 162.468 53.2788 168 59.7655 168c6.4866 0 11.7654-5.532 11.7654-12.329 0-5.673-3.6236-10.454-8.5892-11.907v-40.551h-1.1631c-.4474-11.0631-.7158-26.5331 22.2783-42.3782.7605 1.0313 2.192 1.2657 3.2209.4688l10.7366-8.0163c1.0736-.797 1.2973-2.344.5368-3.4691l-2.2815-3.3284c-.7605-1.1251-2.2368-1.3595-3.3105-.5625l-1.8341 1.3595c-.1342.0937-.3579.0469-.4026-.1407l-1.3868-4.5004c-.1342-.4687-.6263-.75-1.1184-.6094l-.179.0469c-.4473.1407-.7157.6563-.5815 1.172l1.6104 5.2973c.0448.0938.0001.2344-.0894.3282l-6.7998 5.1098c-1.0737.7969-1.2974 2.3439-.5369 3.469l.3579.5157c-4.2051 5.2973-25.7677 15.095-23.4414 45.2848h-1.2079v40.363C52.0262 144.795 48 149.764 48 155.671Z" fill="#A18EFF"/>
+			  <g id="disque" class="disc">
+				<path d="M223.156 119.229c0-41.2945-31.915-74.7705-71.284-74.7705-39.369 0-71.2835 33.476-71.2835 74.7705 0 41.295 31.9145 74.771 71.2835 74.771s71.284-33.476 71.284-74.771Z" fill="#6C5EAB"/>
+				<path d="M175.902 118.995c0-13.869-10.718-25.1118-23.94-25.1118-13.222 0-23.941 11.2428-23.941 25.1118 0 13.868 10.719 25.111 23.941 25.111s23.94-11.243 23.94-25.111Z" fill="#D6C1FF"/>
+				<path d="m134.421 131.292 26.043-.047v1.267l8.726-.047v-4.036l-34.769.047v2.816Z" fill="#2A3086"/>
+				<path d="m134.42 126.035 22.24-.047v1.127l11.411-.047v-5.163l-11.5.047v1.22l-22.195.094.044 2.769Z" fill="#18130D"/>
+				<path d="M134.376 119.417h23.403v1.361h7.741v-4.224l-31.144.047v2.816Z" fill="#A81817"/>
+				<path d="m134.376 115.427 33.516-.047v-4.13l-12.887.047v1.361h-20.629v2.769Z" fill="#DEBF33"/>
+				<path d="m134.376 110.076 34.948-.046v-4.131h-6.533v1.455l-28.415.094v2.628Z" fill="#417E52"/>
+				<path d="M204.004 119.182c0-29.6292-22.899-53.6487-51.147-53.6487-28.248 0-51.147 24.0195-51.147 53.6487 0 29.63 22.899 53.649 51.147 53.649 28.248 0 51.147-24.019 51.147-53.649Z" stroke="#7A6CC2" stroke-width="1.0133" stroke-miterlimit="10"/>
+			  </g>
+			  <path d="M279 198c8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15-8.284 0-15 6.716-15 15 0 8.284 6.716 15 15 15Z" fill="#6C5EAB"/>
+			  <path d="M278.758 182.395v6.411c0 .242 0 .484-.121.605-.121.363-.363.484-.726.363-.242-.121-.363-.242-.484-.363-1.209-1.088-2.419-2.177-3.508-3.145-.121-.121-.242-.121-.242-.242-.242-.363-.484-.484-.967-.484h-2.057c-.847 0-1.21-.363-1.21-1.209v-4.113c0-.726.363-1.21 1.21-1.21h2.42c.12 0 .241 0 .362-.121.605-.605 1.331-1.21 1.936-1.814.726-.605 1.451-1.331 2.177-1.936.242-.242.605-.484.968-.363s.363.605.363.968c-.121 2.298-.121 4.476-.121 6.653ZM288.677 183c0 2.54-.846 5.323-2.419 7.863-.363.605-1.089.605-1.452 0-.121-.242-.121-.484.121-.726.605-1.089 1.21-2.177 1.573-3.266 1.21-4.113.726-7.984-1.452-11.734-.484-.726-.121-1.089.484-1.331.242-.121.484 0 .726.363.484.847.968 1.815 1.331 2.662.725 1.814 1.088 3.75 1.088 6.169ZM284.564 182.395c0 1.815-.362 3.387-1.209 4.839-.242.484-.605.605-.847.363-.484-.242-.605-.605-.363-1.089 1.452-2.661 1.452-5.202 0-7.863-.242-.484-.242-.726.121-.968.484-.362.726-.242 1.089.242.605 1.089 1.088 2.299 1.209 3.629v.847Z" fill="#A18EFF"/>
+			  <path id="stop" class="stop" d="M279 143c11.046 0 20-8.954 20-20s-8.954-20-20-20-20 8.954-20 20 8.954 20 20 20Z" fill="#6C5EAB"/>
+			  <path d="M270.65 113.641v18.654h18.653v-18.654H270.65Z" fill="#A18EFF"/>
+			<g id="play" class="play"></g>  
+			  <path d="M279 78c11.046 0 20-8.9543 20-20s-8.954-20-20-20-20 8.9543-20 20 8.954 20 20 20Z" fill="#6C5EAB"/>
+			  <path d="M269.094 59.3718v6.0577h20.577v-6.0577h-20.577ZM269.094 50.4295v6.0577h20.577v-6.0577h-20.577Z" fill="#A18EFF"/>
+			  <path c d="M279 78c11.046 0 20-8.9543 20-20s-8.954-20-20-20-20 8.9543-20 20 8.954 20 20 20Z" fill="#6C5EAB"/>
+			  <path d="M273.712 58v-8.8462l7.596 4.4231L288.904 58l-7.596 4.3269-7.596 4.4231V58Z" fill="#A18EFF"/>
+			</g>  
+			  <path d="M240 210H42v13.126h198V210Z" fill="#41386B"/>
+			</g>
+			<defs>
+			  <clipPath id="a">
+				<path fill="#fff" transform="matrix(0 -1 1 0 0 235)" d="M0 0h235v321H0z"/>
+			  </clipPath>
+			</defs>
+		</svg>
+		<h2 class="title">Pentatonix</h2>
+		<p>Pentatonix est un groupe vocal originaire d'Arlington au Texas, composé de cinq chanteurs. Les membres de Pentatonix ont gagné deux grammys dans la catégorie du meilleur arrangement instrumental ou a cappella.</p>
+		<p>Pentatonix démarre avec 3 amis, Kirstin Maldonado, Mitch Grassi et Scott Hoying à la Martin High School à Arlington au Texas9. Entendant qu'une radio locale organise un concours pour rencontrer les acteurs de la série Glee, ils arrangent une version trio de la chanson Telephone et l'envoient. Ils ne gagnent pas le concours, mais attirent l'attention autour de leur école, où le groupe a commencé à se produire.</p>
+		<div class="section__btn tgridRow-start4 tgrid-end3">
+			<a href="mailto:francois.szcz@hotmail.be" class="button button-mat btn--5 ">
+				<div class="psuedo-text">Vers&nbsp;la&nbsp;playlist</div>
+			</a>
+		</div>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 356.4 484.2">
+			<defs>
+			  <clipPath id="clip-path">
+				<circle id="fond_centre" data-name="fond centre" class="cls-1" cx="177.3379" cy="283.1116" r="53.55"/>
+			  </clipPath>
+			  <style>
+				.cls-1{fill:#d6c1ff}.cls-3{fill:#6c5eab}.cls-4{fill:#a18eff}
+			  </style>
+			</defs>
+			<g id="fond">
+			  <path id="fond-2" data-name="fond" transform="rotate(-90 178.2 242.1)" fill="#564c89" d="M-63.9 63.9h484.2v356.4H-63.9z"/>
+			</g>
+			<path class="cls-3" d="M13.8 452.3h328.8v19.8H13.8z" id="nomMusic"/>
+			<g id="son">
+			  <g id="son-2" data-name="son">
+				<circle class="cls-3" cx="180.125" cy="33.0642" r="12.375"/>
+				<path class="cls-4" d="M179.9308 32.6123c0 1.7764.002 3.5527-.0033 5.329a1.8228 1.8228 0 0 1-.0744.5366.427.427 0 0 1-.6292.2812 1.6822 1.6822 0 0 1-.4278-.2865q-1.4685-1.3097-2.9272-2.6303a.9136.9136 0 0 1-.2085-.2144.7378.7378 0 0 0-.795-.3688c-.5634.028-1.1294.01-1.6943.0065a.896.896 0 0 1-1.0123-1.0064q-.0023-1.6807.0002-3.3613a.8818.8818 0 0 1 .9766-.9836c.6742-.004 1.3485.0022 2.0227-.0045a.429.429 0 0 0 .2697-.0815c.543-.5106 1.0684-1.0399 1.6143-1.5473.5804-.5395 1.1752-1.0636 1.7682-1.5893.2262-.2005.4716-.4284.7986-.2765.3229.15.3194.4846.32.7862q.0057 2.7054.0017 5.411ZM188.057 33.0529a12.687 12.687 0 0 1-1.9624 6.5201.6495.6495 0 0 1-1.209-.0015.5578.5578 0 0 1 .0771-.6366 10.9138 10.9138 0 0 0 1.258-2.72 11.5375 11.5375 0 0 0-1.2181-9.669c-.3902-.6447-.0645-.8517.426-1.1086.204-.1068.4475.011.601.2995.3887.7306.802 1.4535 1.1196 2.2153a12.8162 12.8162 0 0 1 .9078 5.1008ZM184.6925 32.567a7.7593 7.7593 0 0 1-1.032 3.9566c-.2094.3605-.4535.4625-.7279.3093a.554.554 0 0 1-.2506-.8793 6.4375 6.4375 0 0 0 .0072-6.4894c-.199-.3687-.1758-.5842.0965-.791a.5021.5021 0 0 1 .8535.17 7.4624 7.4624 0 0 1 .9993 3.007c.0308.28.0427.562.054.7167Z"/>
+			  </g>
+			</g>
+			<g id="stop" class="stop">
+			  <circle class="cls-3" cx="225.9125" cy="33.2754" r="20.8125"/>
+			  <path class="cls-4" transform="rotate(-90 226.891 33.2754)" d="M217.1821 23.5665H236.6v19.4179h-19.4179z"/>
+			</g>
+			<g id="disque" class="disc">
+			  <circle id="Fond_disque" data-name="Fond disque" class="cls-3" cx="176.8125" cy="282.875" r="159.3"/>
+			  <circle id="fond_centre-2" data-name="fond centre" class="cls-1" cx="177.3379" cy="283.1116" r="53.55"/>
+			  <g clip-path="url(#clip-path)">
+				<path fill="#2a3086" d="m151.095 243.87.103 58.268-2.659.005.035 19.5 8.641-.016-.139-77.767-5.981.01z"/>
+				<path fill="#18130d" d="m162.274 243.851.099 49.737-2.327.004.045 25.482 10.969-.019-.046-25.704-2.659.005-.162-49.516-5.919.011z"/>
+				<path d="m176.4103 243.8256.0378 52.2855-2.8806.005.0306 17.2836 8.9741-.0158-.0868-69.569Z" fill="#a81817"/>
+				<path fill="#debf33" d="m184.887 243.811.132 74.887 8.753-.016-.051-28.806-2.881.005-.077-46.081-5.876.011z"/>
+				<path fill="#417e52" d="m196.325 243.79.111 78.1 8.753-.015-.026-14.625-3.102.006-.113-63.475-5.623.009z"/>
+			  </g>
+			  <circle id="Ellipse_centre" data-name="Ellipse centre" cx="176.8914" cy="285.0624" r="114.3" fill="none" stroke="#7a6cc2" stroke-miterlimit="10" stroke-width="1.0133"/>
+			</g>
+			<g id="pause">
+			  <g id="pause-2" data-name="pause">
+				<circle class="cls-3" cx="281.2964" cy="33.0642" r="20.8125"/>
+				<path class="cls-4" transform="rotate(-90 281.7125 37.7142)" d="M278.5625 27.0267h6.3v21.375h-6.3z"/>
+				<path class="cls-4" transform="rotate(-90 281.7125 28.4142)" d="M278.5625 17.7267h6.3v21.375h-6.3z"/>
+			  </g>
+			</g>
+			<g id="play" class="play">
+			  <g id="play-2" data-name="play">
+				<circle class="cls-3" cx="281.4464" cy="33.0604" r="20.8125"/>
+				<path class="cls-4" d="M275.907 33.06v-9.121l7.899 4.561 7.899 4.56-7.899 4.561-7.899 4.56V33.06z"/>
+			  </g>
+			</g>
+			<g id="tourner">
+			  <circle id="cercle_fond" cx="98.325" cy="78.75" r="39.15" fill="#9180e6"/>
+			  <path id="pivot" class="cls-4 aiguille" d="M98.45 51.2a26.325 26.325 0 1 0 25.3518 33.4125h86.4732v-2.6616c23.5816-1.0252 56.5973-1.5813 90.3747 49.7844a5.3011 5.3011 0 0 0-1.027 7.2246l17.0806 23.9546a5.3148 5.3148 0 0 0 7.4129 1.2417l7.1253-5.0807a5.3148 5.3148 0 0 0 1.2417-7.413l-2.8923-4.0563a.601.601 0 0 1 .3054-.9212l9.6078-3.089a1.9511 1.9511 0 0 0 1.2602-2.4547l-.114-.3548a1.9513 1.9513 0 0 0-2.455-1.2602l-11.2682 3.6228a.6013.6013 0 0 1-.6735-.2233l-10.8509-15.2178a5.3147 5.3147 0 0 0-7.4128-1.2417l-1.0702.763c-11.3466-9.4236-32.1519-57.6448-96.6447-52.3931V72.125h-86.0567A26.3326 26.3326 0 0 0 98.45 51.2Z"/>
+			</g>
+		  </svg>
 	</main>
 </body>
 </html>
