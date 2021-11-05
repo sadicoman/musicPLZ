@@ -1,26 +1,5 @@
 "use strict";
 
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// gsap.registerPlugin(ScrollTrigger);
-
-
-/*-----BURGER MENU-----*/
-
-let navButton = document.querySelector(".navBtn");
-
-navButton.addEventListener("click", toggleNavigation);
-
-function toggleNavigation() {
-    if (!document.body.hasAttribute("data-menu")) {
-        document.body.setAttribute("data-menu", true);
-    } else {
-        document.body.removeAttribute("data-menu");
-    }
-}
-
-
 
 /*----- ANNIMATION CLICK MENU -----*/
 var navEl = document.querySelectorAll(".nav__lien");
@@ -38,6 +17,22 @@ for (var i = 0; i < navEl.length; i++) {
         e.preventDefault();
     });
 }
+
+
+/*-----BURGER MENU-----*/
+
+let navButton = document.querySelector(".navBtn");
+
+navButton.addEventListener("click", toggleNavigation);
+
+function toggleNavigation() {
+    if (!document.body.hasAttribute("data-menu")) {
+        document.body.setAttribute("data-menu", true);
+    } else {
+        document.body.removeAttribute("data-menu");
+    }
+}
+
 
 /*----- ANNIMATION CLICK Burger -----*/
 let container = document.querySelector('.container');
@@ -109,7 +104,7 @@ playBtnM.addEventListener('click', (e) =>{
     duration: 1.5,
     rotation: '30deg'
   });
-  discM.classList.add('discPlay');
+  discM.classList.add('discPlayM');
   
 });
 
@@ -119,9 +114,17 @@ stopBtnM.addEventListener('click', (e) =>{
     duration: 1.5,
     rotation: '0deg'
   });
-  discM.classList.remove('discPlay');
+  discM.classList.remove('discPlayM');
   mySound.stop();
 });
+
+// let sonBtn = document.querySelectorAll('.son');
+// sonBtn.addEventListener('click', (e) =>{
+//   e.preventDefault();
+//   mySound.son(0);
+// });
+
+
 
 
 /*----- ANNIMATION FOOTER -----*/
@@ -195,6 +198,9 @@ function sound(src) {
     }
     this.stop = function(){
       this.sound.pause();
+    }
+    this.volume = function(){
+      this.sound.volume();
     }
 }
 

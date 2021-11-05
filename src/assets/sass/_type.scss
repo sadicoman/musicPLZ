@@ -66,17 +66,12 @@
     font-weight: bold;
 }
 
-.figure__legende{
-    text-align: right;
-    font-size: 0.8em;
-}
-
 @media screen and (min-width: 1440px) {
     .body{
         font-size: 1.3em; 
     }
     .title{
-        font-size:3.1666666666666665em;
+        font-size:130px;
     }
     .title--h2{
         font-size: 2.388888888888889em;
@@ -84,7 +79,20 @@
     .title--h3{
         font-size: 1.7777777777777777em;
     }
-    .figure__legende{
-        text-align: left;
+}
+
+
+@media screen and (min-width: 1900px) {
+    .body{
+        font-size: 1.5em; 
+    }
+    .title{
+        font-size:180px;
+    }
+    .title--h2{
+        font-size: 2.388888888888889em;
+    }
+    .title--h3{
+        font-size: 1.7777777777777777em;
     }
 }

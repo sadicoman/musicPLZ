@@ -11,12 +11,20 @@
     padding: 15px;
 }
 .section {
-    margin: auto;
-    max-width: 400px;
     display: grid;
     padding: 15px;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px 8px;
+    animation : section 5s ease alternate;
+}
+@keyframes section {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;              
+    }
 }
 .section>* {
     grid-column: 1/-1;
@@ -42,7 +50,70 @@
 
 /* MODIFIER GRILLE */
 
+@media screen and (min-width: 768px) {
+    .section {
+        max-width: 600px;
+        margin: auto;
+    }
+    .header{
+        padding: 25px;
+    }
+}
 
 @media screen and (min-width: 1440px) {
+    .section {
+        display: grid;
+        padding: 15px;
+        grid-template-columns: repeat(10, 1fr);
+        grid-gap: 40px 20px;
+        max-width: 1400px;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+    .section--DisqueMobile{
+        display: none;
+    }
+    .header {
+        padding-bottom: 0px;
+    }
+    /* DEBUT GRILLE */
+    .pgrid-start7 {
+        grid-column-start: 7;
+    }
+    // ROW
+    .pgridRow-start1 {
+        grid-row-start: 1;
+    }
+    .pgridRow-start2 {
+        grid-row-start: 2;
+    }
+    .pgridRow-start3 {
+        grid-row-start: 3;
+    }
+    .pgridRow-start4 {
+        grid-row-start: 4;
+    }
+    /* FIN GRILLE */
+    .pgrid-end6 {
+        grid-column-end: 6;
+    }
+    // ROW
+    .pgridRow-end5 {
+        grid-row-end: 5;
+    }
+}
 
+@media screen and (min-width: 1900px) {
+    .section {
+        display: grid;
+        padding: 15px;
+        grid-template-columns: repeat(10, 1fr);
+        grid-gap: 40px 20px;
+        max-width: 1900px;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+    .section--DisqueMobile{
+        display: none;
+    }
 }

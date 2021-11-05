@@ -45,6 +45,9 @@ body[data-menu] .nav__el {
         animation-delay: 1.8s;
     }
 }
+body[data-menu] .main{
+    display: none;
+}
 body[data-menu] .footer{
     display: none;
 }
@@ -80,6 +83,35 @@ body[data-menu] .nav {
 
 
 @media screen and (min-width: 1440px) {
+    .navBtn {
+        display: none;
+    }
+    .nav {
+        display: block;
+    }
+    .nav__liste {
+        margin: 0;
+        text-align: inherit;
+        display: flex;
+        padding-left: 111px;
+    }
+    .nav__el {
+        text-align: left;
+        opacity: 1;
+    }
+    .nav__lien {
+        font-size: 16px;
+        position: relative;
+        display: inline;
+    }
+}
 
 
+@media screen and (min-width: 1900px) {
+    .nav__liste {
+        padding-left: 170px;
+    }
+    .nav__lien {
+        font-size: 20px;
+    }
 }
