@@ -467,6 +467,445 @@
 
 
 
+// SLIDER MUSIC ALBUMS
+.grid--music{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    // grid-template-rows: repeat(5, 170px);
+    grid-template-rows: 170px 1fr 1fr 1fr 1fr;
+    column-gap: 2%;
+    row-gap: 2%;
+    justify-items:center;
+    align-items: center;
+}
+.grid--music >*{
+    grid-column: 1 / -1;
+}
+.sliderMusic{
+    width: 100%;
+    // max-width: 1200px;
+    // margin: 100px auto 0;
+    position: relative;
+}
+.sliderMusic__el{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* display: none; */
+    /* visibility: hidden;
+    opacity: 0;
+    pointer-events: none; */
+}
+.sliderMusic__el--show{
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+}
+.sliderMusic__content{
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: 10;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    .sliderMusic__svg{
+        width: 100%;
+        max-width: 168px;
+        max-height: 168px;
+    }
+}
+.sliderMusic__svg--gauche{
+    grid-column: 2 / 8;
+    grid-row: 1 / 2;
+}
+.sliderMusic__svg--droit{
+    grid-column: 4 / 10;
+    grid-row: 1 / 2;
+}
+.sliderMusic__svg--milieu{
+    grid-column: 3 / 9;
+    grid-row: 1 / 2;
+}
+
+// .sliderMusic__img{
+//     grid-column: 4 / -1;
+//     grid-row: 1 / span 2;
+//     max-width: 100%;
+//     align-self: center;
+// }
+.sliderMusic__control{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+.sliderMusic__btn{
+    grid-column: 2 / 3;
+    grid-row: 5;
+    align-items: center;
+}
+.sliderMusic__btn--next{
+    grid-row: 5;
+    grid-column: 5 / 6;
+}
+.sliderMusic__control .sliderMusic__btn{
+    padding-top: 5px;
+}
+.sliderMusic__btn--play{
+    grid-column: 3 / 5;
+    grid-row: 4;
+    justify-items: center;
+    background: inherit;
+    border: inherit;
+}
+.sliderMusic--anim .sliderMusic__content{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all .3s ease-out;
+    pointer-events: none;
+}
+.sliderMusic--anim .sliderMusic__content{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all .3s ease-out;
+    pointer-events: none;
+}
+.sliderMusic--anim .title--niveau3, .sliderMusic--anim .progress-bar{
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all .3s ease-out;
+    pointer-events: none;
+}
+.sliderMusic--anim .sliderMusic__el--show .sliderMusic__content,
+.sliderMusic--anim .sliderMusic__el--show .title--niveau3,
+.sliderMusic--anim .sliderMusic__el--show .progress-bar,
+.sliderMusic--anim .sliderMusic__el--show .sliderMusic__img{
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+    transition: all .3s ease-out;
+}
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #BDCCD4;
+    border-radius: 3px;
+}
+.runner {
+    width: 50%;
+    height: 8px;
+    background-color: #DEBF33;;
+}
+
+
+
+
+
+
+
+// ANNIMATION ALBUMS
+/* Annimation 'Christmas is Here' SVG */
+.boule{
+    animation: boule 4s ease-in-out infinite;
+    animation-direction: alternate;
+    transform-origin: top center;
+  }
+  .boule--jaune{
+    animation-duration:3s;
+  }
+  .boule--noire{
+    animation-duration:3.5s;
+  }
+  .boule--vert{
+    animation-duration:4.5s;
+  }
+  .boule--bleu{
+    animation-duration:5s;
+  }
+  @keyframes boule{
+    0%{
+      transform:rotateZ(-2deg);
+    }
+    100%{
+      transform:rotateZ(2deg);
+    }
+  }
+  
+  /* Annimation 'The Best Of Pentatonix Christmas' SVG */
+  .ampoule{
+    animation: ampoule 0.5s ease-in-out infinite;
+    animation-direction: alternate;
+  }
+  @keyframes ampoule{
+    0%{
+      opacity:1;
+    }
+    100%{
+      opacity:0.5;
+    }
+  }
+  
+  /* Annimation 'At Home' SVG */
+  .lanpadaire{
+    animation: lampadaire 3s ease-in-out infinite;
+    animation-direction: alternate;
+  }
+  .lanpadaire--noire{
+      animation-delay: 100ms;
+  }
+  .lanpadaire--rouge{
+      animation-delay: 200ms;
+  }
+  .lanpadaire--jaune{
+      animation-delay: 300ms;
+  }
+  .lanpadaire--vert{
+      animation-delay: 400ms;
+  }
+  @keyframes lampadaire{
+    0%{
+      transform: translateY(-10px);
+    }
+    100%{
+      transform: translateY(20px);
+    }
+  }
+  
+  /* Annimation 'Top Pop, Vol.1' SVG */
+  .PopVol{
+    animation: PopVol 3s ease-in-out infinite;
+    animation-direction: alternate;
+  }
+  @keyframes PopVol{
+    0%{
+      transform: translateY(-50px);
+    }
+    100%{
+      transform: translateY(20px);
+    }
+  }
+  /* Annimation 'We Need a Little Christmas' SVG */
+  .pivot{
+    animation: pivot 3s ease-in-out infinite;
+    animation-direction: alternate;
+    transform-origin: 181.805px 296.806px;
+  }
+  .pivot--boulesDroite{
+    transform-origin: 513px 269px;
+  }
+  .pivot--chausures{
+    transform-origin: 574px 287px;
+  }
+  .pivot--girland{
+    transform-origin: 103px 281px;
+  }
+  .pivot--sapin{
+    transform-origin: 339px 264px;
+  }
+  .pivot--coeur{
+    transform-origin: 670px 300px;
+  }
+  @keyframes pivot{
+    0%{
+      transform: rotateZ(-15deg);
+    }
+    100%{
+      transform: rotateZ(15deg);
+    }
+  }
+  
+  /* Annimation 'PTXmas' SVG */
+  .sapin{
+    animation: sapin 5s ease-in-out infinite;
+    animation-direction: alternate;
+    transform-origin: bottom center;
+  }
+  @keyframes sapin{
+    0%{
+      transform: rotateZ(-1deg);
+    }
+    100%{
+      transform: rotateZ(1deg);
+    }
+  }
+  .etoile path{
+    animation: etoile 2s ease-in-out infinite;
+    filter:
+      drop-shadow(0 0.15vw 0.30vw #fffb0e)
+      drop-shadow(0 0.15vw 0.30vw #8a8942);
+  }
+  @keyframes etoile{
+    0%, 9%, 15%, 79%, 83%, 100% {
+        filter:
+          drop-shadow(0 0.15vw 0.30vw #fffb0e)
+          drop-shadow(0 0.15vw 0.30vw #8a8942);
+      }
+      10%, 14%, 80%, 82%{
+          filter:none;
+      }
+  }
+  /* Annimation 'Volume3' SVG */
+  .Volume3{
+    animation: Volume3 6s ease infinite;
+    filter:
+      drop-shadow(0 1px 1.7px #FFFFFF)
+      drop-shadow(0 1px 0px #00983A)
+      drop-shadow(0 3px 2.88px #293382)
+      drop-shadow(0 5px 20px #DFC032);
+  }
+  @keyframes Volume3{
+    0%, 9%, 15%, 79%, 83%, 100% {
+        filter:
+          drop-shadow(0 1px 1.7px #FFFFFF)
+          drop-shadow(0 1px 0px #00983A)
+          drop-shadow(0 3px 2.88px #293382)
+          drop-shadow(0 5px 20px #DFC032);
+      }
+      10%, 14%, 80%, 82%{
+          filter:none;
+      }
+  }
+  
+  
+  
+  /* Annimation 'That's Christmas to Me SVG */
+  .batonets{
+    animation: batonets 5s ease-in-out infinite;
+    animation-direction: alternate;
+    transform-origin: bottom center;
+  }
+  @keyframes batonets{
+    0%{
+      transform: rotateZ(-5deg);
+    }
+    100%{
+      transform: rotateZ(10deg);
+    }
+  }
+  
+  /* Annimation 'Pentatonix' SVG */
+  .perso{
+    animation: perso 5s ease infinite;
+    animation-direction: alternate;
+    // transform-origin: bottom center;
+  }
+  @keyframes perso{
+    // 0%{
+    //   fill: #293382;
+    // } 
+    20%{
+      fill: #DFC032;
+    } 40%{
+      fill: #F3E6D6;
+    } 60%{
+      fill: #A91918;
+    } 80%{
+      fill: #293382;
+    } 100%{
+      fill: #F3E6D6;
+    }
+  }
+  
+  /* Annimation 'The Lucky Ones' SVG */
+  .chanteur{
+    animation: chanteur 6s ease infinite;
+    animation-direction: alternate;
+  }
+  .chanteur--bleu{
+      animation-delay: 200ms;
+  }
+  .chanteur--vert{
+      animation-delay: 400ms;
+  }
+  .chanteur--rouge{
+      animation-delay: 600ms;
+  }
+  .chanteur--jaune{
+      animation-delay: 800ms;
+  }
+  @keyframes chanteur{
+    0%{
+      opacity:0;
+    }25%{
+      opacity:1;
+    }50%{
+      opacity:0;
+    }100%{
+      opacity:1;
+    }
+  }
+  .chanteur--cercle{
+    animation: chanteur--cercle 2s ease-in-out infinite;
+    animation-direction: alternate;
+  }
+  @keyframes chanteur--cercle{
+    0%{
+      transform: rotateZ(-2deg);
+    }
+    100%{
+      transform: rotateZ(2deg);
+    }
+  }
+  
+  /* Annimation 'A pentatonix Christmas' SVG */
+  .gui{
+    animation: gui 4s ease infinite;
+    animation-direction: alternate;
+  }
+  @keyframes gui{
+    0%{
+      transform: rotateZ(-3deg);
+    }100%{
+      transform: rotateZ(3deg);
+    }
+  }
+  
+  /* Annimation 'Volume1' SVG */
+  .vol1{
+    animation: vol1 6s ease alternate infinite;
+    // animation-direction: alternate;
+    stroke-dasharray:  2000;
+    stroke-dashoffset: 2000;
+  }
+  .vol1--x{
+    stroke-dasharray:  1050;
+    stroke-dashoffset: 1050;
+    animation-duration: 5.7s;
+    // animation-delay: 2.5s;
+  }
+  @keyframes vol1{
+    to {
+      stroke-dashoffset: 0%;
+    }
+  }
+  
+  /* Annimation 'Volume2' SVG */
+  
+  .vol2{
+    animation: vol2 6s ease alternate infinite;
+  }
+  @keyframes vol2{
+    20%{
+      stroke: #DFC032;
+    } 40%{
+      stroke: #F3E6D6;
+    } 60%{
+      stroke: #A91918;
+    } 80%{
+      stroke: #293382;
+    } 100%{
+      stroke: #F3E6D6;
+    }
+  }
+
+
+
+
+
+
+
+
 
 
 

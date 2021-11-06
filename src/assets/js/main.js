@@ -262,3 +262,51 @@ if (slider) {
   hammerSlider.on("swipeleft", prev);
   hammerSlider.on("swiperight", next);
 }
+
+
+
+
+
+
+
+
+
+
+
+/*----- SLIDER MUSIC ALBUMS -----*/
+const btnPrevMusic = document.querySelector(".sliderMusic__btn--prev");
+const btnNextMusic = document.querySelector(".sliderMusic__btn--next");
+const sliderMusicF = document.querySelector(".sliderMusic");
+
+if (sliderMusicF) {
+  btnNextMusic.addEventListener("click", nextMusic);
+  btnPrevMusic.addEventListener("click", prevMusic);
+}
+
+
+function nextMusic(){
+  let elShowMusic = document.querySelector(".sliderMusic__el--show");
+  let elNextMusic = elShowMusic.nextElementSibling;
+
+  elShowMusic.classList.remove("sliderMusic__el--show");
+
+  if(elNextMusic){
+    elNextMusic.classList.add("sliderMusic__el--show");
+  }else{
+    let elFirstMusic = elShowMusic.parentNode.firstElementChild;
+    elFirstMusic.classList.add("sliderMusic__el--show");
+  }
+}
+function prevMusic(){
+  let elShowMusic = document.querySelector(".sliderMusic__el--show");
+  let elPrevMusic = elShowMusic.previousElementSibling;
+
+  elShowMusic.classList.remove("sliderMusic__el--show");
+
+  if(elPrevMusic){
+    elPrevMusic.classList.add("sliderMusic__el--show");
+  }else{
+    let elLastMusic = elShowMusic.parentNode.lastElementChild;
+    elLastMusic.classList.add("sliderMusic__el--show");
+  }
+}
