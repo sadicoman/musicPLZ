@@ -9,13 +9,14 @@
     grid-gap: 20px 20px;
     align-items: center;
     padding: 15px;
+    animation : section 2s ease alternate;
 }
 .section {
     display: grid;
     padding: 15px;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px 8px;
-    animation : section 5s ease alternate;
+    animation : section 2s ease alternate;
 }
 @keyframes section {
     0% {
@@ -62,13 +63,12 @@
 
 @media screen and (min-width: 1440px) {
     .section {
-        display: grid;
         padding: 15px;
         grid-template-columns: repeat(10, 1fr);
         grid-gap: 40px 20px;
         max-width: 1400px;
-        margin: auto;
         margin-bottom: 1em;
+        margin-top: 3em;
     }
     .section--DisqueMobile{
         display: none;
@@ -98,6 +98,9 @@
         grid-column-end: 6;
     }
     // ROW
+    .pgridRow-end3 {
+        grid-row-end: 3;
+    }
     .pgridRow-end5 {
         grid-row-end: 5;
     }
@@ -105,13 +108,8 @@
 
 @media screen and (min-width: 1900px) {
     .section {
-        display: grid;
-        padding: 15px;
-        grid-template-columns: repeat(10, 1fr);
         grid-gap: 40px 20px;
-        max-width: 1900px;
-        margin: auto;
-        margin-bottom: 1em;
+        max-width: 1700px;
     }
     .section--DisqueMobile{
         display: none;

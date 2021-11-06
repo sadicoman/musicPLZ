@@ -58,31 +58,46 @@ let playBtn = document.querySelector('.play');
 let aiguille = document.querySelector('.aiguille');
 let disc = document.querySelector('.disc');
 let stopBtn = document.querySelector('.stop');
+let nomMusicEls = document.querySelectorAll('.nomMusicContainer__el');
+function seeNomMusicEls(){
+  for(let nomMusicEl of nomMusicEls){
+    if(nomMusicEl.classList.contains('nomMusicContainer__el--hidden')){
+      nomMusicEl.classList.remove('nomMusicContainer__el--hidden');
+    }else{
+      nomMusicEl.classList.add('nomMusicContainer__el--hidden');
+    }
+  }
+}
 
-const tl1 = gsap.timeline({});
-playBtn.addEventListener('click', (e) =>{
-  e.preventDefault();
-  tl1.set(aiguille,{
-    transformOrigin: '26px 28px'
+if (playBtn) {
+  const tl1 = gsap.timeline({});
+  playBtn.addEventListener('click', (e) =>{
+    e.preventDefault();
+    seeNomMusicEls();
+    tl1.set(aiguille,{
+      transformOrigin: '26px 28px'
+    });
+    tl1.to(aiguille,{
+      duration: 1.5,
+      rotation: '30deg'
+    });
+    disc.classList.add('discPlay');
+    mySound = new sound("../assets/sound/pentatonix-making-christmas-from-the-nightmare-before-christmas-official-video.mp3");
+    mySound.play();
   });
-  tl1.to(aiguille,{
-    duration: 1.5,
-    rotation: '30deg'
-  });
-  disc.classList.add('discPlay');
-  mySound = new sound("../assets/sound/pentatonix-making-christmas-from-the-nightmare-before-christmas-official-video.mp3");
-  mySound.play();
-});
 
-stopBtn.addEventListener('click', (e) =>{
-  e.preventDefault();
-  tl1.to(aiguille,{
-    duration: 1.5,
-    rotation: '0deg'
-  });
-  disc.classList.remove('discPlay');
-  mySound.stop();
-});
+  stopBtn.addEventListener('click', (e) =>{
+    e.preventDefault();
+    seeNomMusicEls();
+    tl1.to(aiguille,{
+      duration: 1.5,
+      rotation: '0deg'
+    });
+    disc.classList.remove('discPlay');
+    mySound.stop();
+  });  
+}
+
 
 /*----- ANNIMATION TOURNE DISQUE -----*/
 /*-----          MOBILE          -----*/
@@ -91,32 +106,36 @@ let aiguilleM = document.querySelector('.aiguille--mobile');
 let discM = document.querySelector('.disc--mobile');
 let stopBtnM = document.querySelector('.stop--mobile');
 
-const tl1M = gsap.timeline({});
-playBtnM.addEventListener('click', (e) =>{
-  mySound = new sound("../assets/sound/pentatonix-making-christmas-from-the-nightmare-before-christmas-official-video.mp3");
-  mySound.play();  
-  e.preventDefault();
-  
-  tl1M.set(aiguilleM,{
-    transformOrigin: '12px 114px'
+if (playBtnM) {
+  const tl1M = gsap.timeline({});
+  playBtnM.addEventListener('click', (e) =>{
+    mySound = new sound("../assets/sound/pentatonix-making-christmas-from-the-nightmare-before-christmas-official-video.mp3");
+    mySound.play();  
+    e.preventDefault();
+    seeNomMusicEls();
+    tl1M.set(aiguilleM,{
+      transformOrigin: '12px 114px'
+    });
+    tl1M.to(aiguilleM,{
+      duration: 1.5,
+      rotation: '30deg'
+    });
+    discM.classList.add('discPlayM');
+    
   });
-  tl1M.to(aiguilleM,{
-    duration: 1.5,
-    rotation: '30deg'
-  });
-  discM.classList.add('discPlayM');
-  
-});
 
-stopBtnM.addEventListener('click', (e) =>{
-  e.preventDefault();
-  tl1M.to(aiguilleM,{
-    duration: 1.5,
-    rotation: '0deg'
-  });
-  discM.classList.remove('discPlayM');
-  mySound.stop();
-});
+  stopBtnM.addEventListener('click', (e) =>{
+    e.preventDefault();
+    seeNomMusicEls();
+    tl1M.to(aiguilleM,{
+      duration: 1.5,
+      rotation: '0deg'
+    });
+    discM.classList.remove('discPlayM');
+    mySound.stop();
+  });  
+}
+
 
 // let sonBtn = document.querySelectorAll('.son');
 // sonBtn.addEventListener('click', (e) =>{
@@ -125,7 +144,7 @@ stopBtnM.addEventListener('click', (e) =>{
 // });
 
 
-
+// let burgs = document.querySelectorAll('.burg');
 
 /*----- ANNIMATION FOOTER -----*/
 const grid = document.querySelector('.footer__music');
@@ -176,14 +195,6 @@ for( let i=0; i <= n; i++){
 
 }    
 
-
-
-//------------------------
-// je suis allé manger :)
-//------------------------
-
-
-
 /*----- FUNCTION SOUND -----*/
 var mySound;
 function sound(src) {
@@ -203,9 +214,51 @@ function sound(src) {
       this.sound.volume();
     }
 }
-
-
-
-
 // mySound = new sound("../assets/sound/voix/narrateur-1.mp3");
 // mySound.play();
+
+
+/*----- SLIDER MEMBRES DU GROUPES -----*/
+const btnPrev = document.querySelector(".slider__btn--prev");
+const btnNext = document.querySelector(".slider__btn--next");
+const sliderF = document.querySelector(".slider");
+
+if (sliderF) {
+  btnNext.addEventListener("click", next);
+btnPrev.addEventListener("click", prev);
+}
+
+
+function next(){
+  let elShow = document.querySelector(".slider__el--show");
+  let elNext = elShow.nextElementSibling;
+
+  elShow.classList.remove("slider__el--show");
+
+  if(elNext){
+    elNext.classList.add("slider__el--show");
+  }else{
+    let elFirst = elShow.parentNode.firstElementChild;
+    elFirst.classList.add("slider__el--show");
+  }
+}
+function prev(){
+  let elShow = document.querySelector(".slider__el--show");
+  let elPrev = elShow.previousElementSibling;
+
+  elShow.classList.remove("slider__el--show");
+
+  if(elPrev){
+    elPrev.classList.add("slider__el--show");
+  }else{
+    let elLast = elShow.parentNode.lastElementChild;
+    elLast.classList.add("slider__el--show");
+  }
+}
+// Hamer 
+const slider = document.querySelector('.slider');
+if (slider) {
+  const hammerSlider = new Hammer(slider);
+  hammerSlider.on("swipeleft", prev);
+  hammerSlider.on("swiperight", next);
+}

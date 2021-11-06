@@ -43,6 +43,9 @@
 .footer__lien{
     font-size: 0.8em;
     color: var(--color-on-background-footer);
+    .small{
+     cursor: pointer;   
+    }
 }
 .footer__lien:hover{
     color: var(--color-secondary);
@@ -60,7 +63,9 @@
 .title--niveau3{
     font-size: 1.2222222222222223em;
 }
-
+.title--none{
+    display: none;
+}
 /* Main */
 .bold{
     font-weight: bold;
@@ -73,10 +78,10 @@
     .title{
         font-size:130px;
     }
-    .title--h2{
-        font-size: 2.388888888888889em;
+    .title--niveau2{
+        font-size: 50px;
     }
-    .title--h3{
+    .title--niveau3{
         font-size: 1.7777777777777777em;
     }
 }
@@ -89,10 +94,7 @@
     .title{
         font-size:180px;
     }
-    .title--h2{
-        font-size: 2.388888888888889em;
-    }
-    .title--h3{
-        font-size: 1.7777777777777777em;
+    .title--niveau2{
+        font-size: 70px;
     }
 }

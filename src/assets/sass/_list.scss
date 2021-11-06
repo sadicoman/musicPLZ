@@ -80,7 +80,9 @@ body[data-menu] .nav {
     overflow-y: scroll;
     z-index: 2;
 }
-
+.rca__liste{
+    margin-top: 1em;
+}
 
 @media screen and (min-width: 1440px) {
     .navBtn {
@@ -113,5 +115,6 @@ body[data-menu] .nav {
     }
     .nav__lien {
         font-size: 20px;
+        display: inherit;
     }
 }

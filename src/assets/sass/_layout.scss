@@ -2,6 +2,11 @@
  * LAYOUT
 ** =============================================================== */
 
+
+
+
+
+
 /*********** LOADER ***********/
 .loader{
     display: none;
@@ -19,7 +24,7 @@
     display: block;
     width: 100%;
     height: 0%;
-    animation: loader ease 4s;
+    animation: loader ease 2.5s;
     &--noir{
         background-color: var(--color-noir);
         animation-delay: 200ms;
@@ -46,7 +51,7 @@
         height: 0%;
     }
 }
-.out .main, .out .footer{
+.out .main, .out .footer, .out .header{
     display: none;
 }
 /*********** MENU BURGER ***********/
@@ -123,6 +128,7 @@
 /*********** LOGO ***********/
 .logo--img{
     height: 35px;
+    cursor: pointer;
 }
 .logo{
     display: block;
@@ -130,6 +136,7 @@
     height: 35px;
     position: relative;
     z-index: 99;
+    cursor: pointer;
 }
 
 /*********** MENU ***********/
@@ -284,6 +291,196 @@
     margin: auto;
 }
 
+// LISTE RCA
+.rca__el {
+    display: flex;
+    padding-bottom: 5px;
+}
+.rca__el::before {
+    content: url(../images/puce.svg);
+    width: 20px;
+    display: inline-flex;
+    padding-right: 10px;
+}
+.rca2{
+    animation: neon2 5s ease-out infinite;
+  }
+  @keyframes neon2{
+    0%, 9%, 15%, 79%, 83%, 100% {
+        fill: url(#pattern0);
+      }
+      10%, 14%, 80%, 82%{
+        fill:none;
+      } 
+  }
+  .rca2--pattern1{
+    animation: neon2--pattern1 5s ease-out infinite;
+  }
+  @keyframes neon2--pattern1{
+    0%, 9%, 15%, 79%, 83%, 100% {
+        fill: url(#pattern1);
+      }
+      10%, 14%, 80%, 82%{
+        fill:none;
+      } 
+  }
+  .rca2--pattern2{
+    animation: neon2--pattern2 6s ease-out infinite;
+  }
+  @keyframes neon2--pattern2{
+    0%, 9%, 15%, 79%, 83%, 100% {
+        fill: url(#pattern2);
+      }
+      10%, 14%, 80%, 82%{
+        fill:none;
+      } 
+  }
+@keyframes nomMusicSlide {
+    from{
+        left: -400px;
+    }
+    to{
+        transform: translateX(1080px);
+    }
+}
+.nomMusicContainer{
+    width: 180px;
+    height: 12px;
+    background-color: #6c5eab;
+    top: 270px;
+    right: 115px;
+    position: absolute;
+    overflow: hidden;
+    &__el{
+        position: absolute;
+        top: 3px;
+        left: -400px;
+        font-size: 7px;
+        &--1{
+            animation: nomMusicSlide 6s linear infinite;    
+            animation-delay: 1s;
+        }
+        &--2{
+            animation: nomMusicSlide 6s linear infinite;
+            animation-delay: 3s;
+        }
+        &--3{
+            animation: nomMusicSlide 6s linear infinite;
+            animation-delay: 5s;
+        }
+    }
+}
+
+
+
+
+
+// SLIDER MEMBRES DU GROUPES
+.grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 150px);
+    column-gap: 2%;
+}
+.grid--center{
+    justify-items: center;
+}
+.slider{
+    width: 100%;
+    // max-width: 1200px;
+    // margin: 100px auto 0;
+    position: relative;
+}
+.slider__el{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* display: none; */
+    /* visibility: hidden;
+    opacity: 0;
+    pointer-events: none; */
+}
+.slider__el--show{
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+}
+.slider__content{
+    grid-column: 1 / span 4;
+    grid-row: 2 / 5;
+    background-color: var(--color-primary);
+    z-index: 10;
+    padding: 5px;
+    font-size: 16px;
+    p{
+        padding-top: 10px;
+    }
+}
+
+.slider__img{
+    grid-column: 4 / -1;
+    grid-row: 1 / span 2;
+    max-width: 100%;
+    align-self: center;
+}
+.slider__control{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+.slider__btn{
+    grid-column: 2 / 3;
+    grid-row: 5;
+    padding-top: 30px;
+}
+.slider__btn--next{
+    grid-row: 5;
+    grid-column: 5 / 6;
+}
+.slider--anim .slider__content{
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all .3s ease-out;
+    pointer-events: none;
+}
+.slider--anim .slider__img{
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all .3s ease-out;
+    pointer-events: none;
+}
+.slider--anim .slider__el--show .slider__content,
+.slider--anim .slider__el--show .slider__img{
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+    transition: all .3s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -300,7 +497,35 @@
         max-width: 768px;
         margin: auto;
     }
+    .nomMusicContainer{
+        width: 371px;
+        height: 25px;
+        top: 493px;
+        right: 235px;
+        &__el{
+            font-size: 14px;
+        }
+    }
+    .grid {
+        grid-template-rows: repeat(4, 150px);
+    }
+    .slider{
+        margin-top: 3em;
+    }
+    .slider__content {
+        grid-row: 2/4;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .slider__btn {
+        grid-row: 4;
+    }
+    .slider__btn--next {
+        grid-row: 4;
+    }
 }
+
+
 
 
 
@@ -368,7 +593,37 @@
     .nav__lien:hover {
         color: var(--color-secondary);
     }
+    .rca__el {
+        padding-bottom: 0.5em;
+        align-items: center;
+    }
+    .nomMusicContainer{
+        width: 495px;
+        height: 30px;
+        top: 862px;
+        right: 57px;
+        &__el{
+            font-size: 16px;
+        }
+    }
+    .grid{
+        max-width: 1400px;
+        margin: auto;
+    }
+    .slider__content{
+        p{
+            max-width: 500px;
+        }
+    }
 }
+
+
+
+
+
+
+
+
 
 
 @media screen and (min-width: 1900px) {
@@ -399,6 +654,23 @@
         max-width: 1900px;
         margin: auto;
     }
+    .nav__el .nav__lien--actif:after {
+        bottom: 0px;
+        height: 5px;
+    }
+    .nav__el .nav__lien:after{
+        bottom: 0px;
+        height: 5px;
+    }
+    .nomMusicContainer{
+        width: 495px;
+        height: 30px;
+        top: 862px;
+        right: 47px;
+        &__el{
+            font-size: 16px;
+        }
+    }
 }
 
 
@@ -406,7 +678,9 @@
 
 
 
-@media screen and (min-width: 2100px) {
+
+
+@media screen and (min-width: 3000px) {
     .footer{
         position: absolute;
         bottom: 0px;

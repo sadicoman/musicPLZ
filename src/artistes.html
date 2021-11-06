@@ -4,9 +4,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Projet MusicPLZ</title>
+	<title>Projet MusicPLZ - artistes groupes pentatonix</title>
 	<!-- CSS -->
 	<link href="assets/css/main.css" rel="stylesheet" >
+	<!-- Javascript Hammer -->
+	<script src="assets/js/modules/hammer.min.js" defer></script>
 	<!-- Javascript -->
 	<script src="assets/js/main.min.js" defer></script>
 	<!-- GSAP -->
@@ -89,8 +91,68 @@
 		</div>
 	</header>
 	<main class="main">
-		<h1>Salut sur la pasges artistes</h1>
-		
+		<h1 class="title--none">Page artistes du groupes Pentatonix présentation - Album pentatonix - MusicPlz sur Pentatonix</h1>
+		<section class="section">
+			<h2 class="title title--niveau2">Membres du groupes</h2>
+			<!-- Un Slider -->
+			<div class="slider slider--anim">
+				<ul class="clider__list">
+					<li class="slider__el slider__el--show grid">
+						<div class="slider__content">
+							<h2 class="title--niveau3">Kirstin Maldonado</h2>
+							<p>Kirstin Taylor Kirstie Maldonado, née le 16 mai 19921 à Fort Worth au Texas, est une chanteuse américaine et membre du groupe de chant a cappella Pentatonix récompensé aux Grammy Awards.</p>
+							<p>Avec Pentatonix, elle a sorti sept albums studio et remporté trois Grammy Awards.</p>
+						</div>
+						<img src="assets/images/Kirstin_Maldonado.png" srcset="assets/images/Kirstin_Maldonado@2x.png 2x" alt="Kirstie Maldonado" class="slider__img">
+					</li>
+					<li class="slider__el grid">
+						<div class="slider__content">
+							<h2 class="title--niveau3">Kevin Olusola</h2>
+							<p>Kevin Olusola, né le 5 octobre 1988 à Owensboro (Kentucky, États-Unis), est un musicien, beatboxer, violoncelliste, rappeur, producteur de disques, chanteur et auteur-compositeur américain. Olusola est surtout connu comme le beatboxer et un des chanteurs du groupe vocal Pentatonix</p>
+						</div>
+						<img src="assets/images/Kevin_Olusola.png" srcset="assets/images/Kevin_Olusola@2x.png 2x" alt="Kevin Olusola" class="slider__img">
+					</li>
+					<li class="slider__el grid">
+						<div class="slider__content">
+							<h2 class="title--niveau3">Mitch Grassi</h2>
+							<p>Mitchell Coby Michael Grassi, né le 24 juillet 1992 à Arlington, au Texas, est un chanteur américain, auteur-compositeur et Youtubeur. Il est principalement connu pour être la Haute-contre du groupe a cappella Pentatonix. Il a également co-organisé le web-show Superfruit avec son compatriote et membre de Pentatonix Scott Hoying.</p>
+						</div>
+						<img src="assets/images/Mitch_Grassi.png" srcset="assets/images/Mitch_Grassi@2x.png 2x" alt="Mitch Grassi" class="slider__img">
+					</li>
+					<li class="slider__el grid">
+						<div class="slider__content">
+							<h2 class="title--niveau3">Scott Hoying</h2>
+							<p>Scott Richard Hoying (né le 17 Septembre, 1991) est un chanteur américain, musicien et auteur - compositeur qui a retenu l'attention internationale en tant que baryton du a capella groupe Pentatonix et demi du duo de musique superfruits.</p>
+						</div>
+						<img src="assets/images/Scott_Hoying.png" srcset="assets/images/Scott_Hoying@2x.png 2x" alt="Scott Hoying" class="slider__img">
+					</li>
+					<li class="slider__el grid">
+						<div class="slider__content">
+							<h2 class="title--niveau3">Matt Sallee</h2>
+							<p>Matt est né à Baltimore, Maryland et a grandi à La Plata, Maryland. Il a chanté toute sa vie. Il a commencé très jeune à chanter à l'église sous la direction de son père qui était pasteur de musique. Il a ensuite fait de nombreux spectacles et comédies musicales dans ses écoles et dans la région du sud du Maryland.</p>
+						</div>
+						<img src="assets/images/Matt_Sallee.png" srcset="assets/images/Matt_Sallee@2x.png 2x" alt="Matt Sallee" class="slider__img">
+					</li>
+				</ul>
+				<ul class="slider__control grid grid--center">
+					<li class="slider__btn slider__btn--prev"><img src="assets/images/previous.svg" alt="previous"></li>
+					<li class="slider__btn slider__btn--next"><img src="assets/images/next.svg" alt="next"></li>
+				</ul>
+			</div>
+		</section>
+		<section class="section">
+			<h2 class="title title--niveau2">Albums pentatonix</h2>
+		</section>
 	</main>
+	<footer class="footer">
+		<div class="footer__music"></div>
+		<div class="footer__div">
+			<ul class="footer__liste">
+				<li class="footer__el"><a class="footer__lien" href="http://dwm.re">dwt</a></li>
+				<li class="footer__el"><a class="footer__lien" href="index.html"><small class="small">François © MusicPlz</small></a></li>
+				<li class="footer__el"><a class="footer__lien" href="https://new.ptxofficial.com">Pentatonix</a></li>
+			</ul>
+		</div>
+	</footer>
 </body>
 </html>
