@@ -20,6 +20,10 @@
     cursor: pointer;
     // color: var(--color-on-primary);
     padding: 0;
+    cursor: pointer;
+    .container, .burg{
+        cursor: pointer;
+    }
 }
 .nav__liste {
     margin: 0;
@@ -36,13 +40,13 @@
 //     opacity: 1;
 // }
 body[data-menu] .nav__el {
-    animation: lien 2s ease forwards;
+    animation: lien 0.6s ease forwards;
     &--propos{
-        animation: lien2 1.5s ease forwards;
-        animation-delay: 1s;
+        animation: lien2 0.6s ease forwards;
+        animation-delay: 0.3s;
     }
     &--artistes{
-        animation-delay: 1.8s;
+        animation-delay: 0.6s;
     }
 }
 body[data-menu] .main{

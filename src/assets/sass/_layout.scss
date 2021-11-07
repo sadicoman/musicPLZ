@@ -100,7 +100,7 @@
 }
 .burg__h--clicked{
     transform: translateY(11px) rotate(45deg);
-    animation: burger 1s ease;
+    animation: burger 0.8s ease;
     animation-direction: alternate;
 }
 @keyframes burger{
@@ -115,7 +115,7 @@
 }
 .burg__b--clicked{
     transform: translateY(-11px) rotate(-45deg);
-    animation: burger2 1s ease;
+    animation: burger2 0.8s ease;
     animation-direction: alternate;
 }
 @keyframes burger2{
@@ -444,6 +444,10 @@
     grid-column: 2 / 3;
     grid-row: 5;
     padding-top: 30px;
+    img{
+      cursor: pointer;
+    }
+    
 }
 .slider__btn--next{
     grid-row: 5;
@@ -520,6 +524,7 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     width: 100%;
+    justify-items: center;
     .sliderMusic__svg{
         width: 100%;
         max-width: 168px;
@@ -919,7 +924,11 @@
       stroke: #F3E6D6;
     }
   }
-
+.reseau{
+  display: flex;
+  justify-content: center;
+  column-gap:50px;
+}
 
 
 
@@ -986,6 +995,26 @@
     .progress-bar{
       grid-column: 2 / 6;
     }
+  .sliderMusic__content .sliderMusic__svg {
+    width: 100%;
+    max-width: 340px;
+    max-height: 340px;
+  }
+  .progress-bar {
+    height: 10px;
+  }
+  .progress-bar__actif {  
+    height: 10px;
+  }
+  .sliderMusic__img{
+    width: 25px;
+  }
+  .sliderMusic__img--play{
+    width: 45px;
+  }
+  .reseau{
+    column-gap: 150px;
+  }
 }
 
 
@@ -1078,6 +1107,11 @@
             max-width: 500px;
         }
     }
+    .sliderMusic__content .sliderMusic__svg {
+      width: 100%;
+      max-width: 510px;
+      max-height: 510px;
+    }
 }
 
 
@@ -1148,5 +1182,8 @@
         position: absolute;
         bottom: 0px;
         width: 100%;
+    }
+    .footer--artistes{
+      position: inherit;
     }
 }
