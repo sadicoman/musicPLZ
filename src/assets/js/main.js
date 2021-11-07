@@ -210,6 +210,9 @@ function sound(src) {
     this.stop = function(){
       this.sound.pause();
     }
+    this.remove = function(){
+      this.sound.remove();
+    }
     this.volume = function(){
       this.sound.volume();
     }
@@ -310,3 +313,106 @@ function prevMusic(){
     elLastMusic.classList.add("sliderMusic__el--show");
   }
 }
+
+
+
+
+  let sound1 = document.querySelector('.sliderMusic__el--show .sound1');
+  let sound2 = document.querySelector('.sliderMusic__el--show .sound2');
+  let sound3 = document.querySelector('.sliderMusic__el--show .sound3');
+  let sound4 = document.querySelector('.sliderMusic__el--show .sound4');
+  let sound5 = document.querySelector('.sliderMusic__el--show .sound5');
+  let sound6 = document.querySelector('.sliderMusic__el--show .sound6');
+  let sound7 = document.querySelector('.sliderMusic__el--show .sound7');
+  let sound8 = document.querySelector('.sliderMusic__el--show .sound8');
+  let sound9 = document.querySelector('.sliderMusic__el--show .sound9');
+  let sound10 = document.querySelector('.sliderMusic__el--show .sound10');
+  let sound11 = document.querySelector('.sliderMusic__el--show .sound11');
+  let sound12 = document.querySelector('.sliderMusic__el--show .sound12');
+  let sound13 = document.querySelector('.sliderMusic__el--show .sound13');
+
+
+
+
+let btnMusicPlay = document.querySelector(".sliderMusic__btn--play");
+
+btnMusicPlay.addEventListener('click', (e) =>{
+
+  if (!mySound) {
+    if (sound1) {
+      mySound = new sound("../assets/sound/Aha.mp3");
+      mySound.play(); 
+    }
+    else if (sound2) {
+      mySound = new sound("../assets/sound/Carol_of_the_Bells.mp3");
+      mySound.play(); 
+    }
+    else if (sound3) {
+      mySound = new sound("../assets/sound/Daft_Punk.mp3");
+      mySound.play(); 
+    }
+    else if (sound4) {
+      mySound = new sound("../assets/sound/La_La_Latch.mp3");
+      mySound.play(); 
+    }
+    else if (sound5) {
+      mySound = new sound("../assets/sound/Dance_of_the_Sugar_Plum_Fairy.mp3");
+      mySound.play(); 
+    }
+    else if (sound6) {
+      mySound = new sound("../assets/sound/Na_Na_Na.mp3");
+      mySound.play(); 
+    }
+    else if (sound7) {
+      mySound = new sound("../assets/sound/God_Rest_Ye_Merry_Gentlemen.mp3");
+      mySound.play(); 
+    }
+    else if (sound8) {
+      mySound = new sound("../assets/sound/Despacito_x_Shape_Of_You.mp3");
+      mySound.play(); 
+    }
+    else if (sound9) {
+      mySound = new sound("../assets/sound/Waltz_of_the_Flowers.mp3");
+      mySound.play(); 
+    }
+    else if (sound10) {
+      mySound = new sound("../assets/sound/Little_Drummer_Boy.mp3");
+      mySound.play(); 
+    }
+    else if (sound11) {
+      mySound = new sound("../assets/sound/Dreams.mp3");
+      mySound.play(); 
+    }
+    else if (sound12) {
+      mySound = new sound("../assets/sound/Once_Upon_a_December.mp3");
+      mySound.play(); 
+    }
+    else if (sound13) {
+      mySound = new sound("../assets/sound/Be_My_Eyes.mp3");
+      mySound.play(); 
+    }
+
+  }else{
+    mySound.stop();
+    mySound.remove();
+  }
+});
+
+
+ 
+
+
+
+// let myAudio = document.querySelector(".sliderMusic__el--show .sound");
+// btnMusicPlay.addEventListener("click", Play);
+
+
+
+// function Play(){
+//   if(myAudio.paused) {
+//       myAudio.play();
+//   }
+//   else {
+//       myAudio.pause();
+//   }
+// }

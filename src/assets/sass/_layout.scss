@@ -223,6 +223,11 @@
       transform:rotate(360deg);
     }
 }
+.svgContainer{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
 .tourneDisque{
     width:100%;
     height: 100%;
@@ -353,9 +358,14 @@
     overflow: hidden;
     &__el{
         position: absolute;
+
+// changer la position et la taille pour tous les divices
         top: 3px;
         left: -400px;
         font-size: 7px;
+        &--hidden{
+            display: none;
+        }
         &--1{
             animation: nomMusicSlide 6s linear infinite;    
             animation-delay: 1s;
@@ -538,7 +548,7 @@
     margin: 0;
     padding: 0;
     position: relative;
-    z-index: 10;
+    // z-index: 10;
 }
 .sliderMusic__btn{
     grid-column: 2 / 3;
@@ -558,7 +568,11 @@
     justify-items: center;
     background: inherit;
     border: inherit;
+    // display: none;
 }
+// .sliderMusic__el--show .sliderMusic__btn--play{
+//     display: inherit;
+// }
 .sliderMusic--anim .sliderMusic__content{
     transform: translateX(50px);
     opacity: 0;
