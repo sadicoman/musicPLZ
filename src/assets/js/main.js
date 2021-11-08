@@ -82,7 +82,7 @@ if (playBtn) {
       rotation: '30deg'
     });
     disc.classList.add('discPlay');
-    mySound = new sound("../assets/sound/pentatonix-making-christmas-from-the-nightmare-before-christmas-official-video.mp3");
+    mySound = new sound("assets/sound/pentatonix-making-christmas-from-the-nightmare-before-christmas-official-video.mp3");
     mySound.play();
   });
 
@@ -109,7 +109,7 @@ let stopBtnM = document.querySelector('.stop--mobile');
 if (playBtnM) {
   const tl1M = gsap.timeline({});
   playBtnM.addEventListener('click', (e) =>{
-    mySound = new sound("../assets/sound/pentatonix-making-christmas-from-the-nightmare-before-christmas-official-video.mp3");
+    mySound = new sound("assets/sound/pentatonix-making-christmas-from-the-nightmare-before-christmas-official-video.mp3");
     mySound.play();  
     e.preventDefault();
     seeNomMusicEls();
@@ -221,7 +221,7 @@ function sound(src) {
       this.sound.volume();
     }
 }
-// mySound = new sound("../assets/sound/voix/narrateur-1.mp3");
+// mySound = new sound("assets/sound/voix/narrateur-1.mp3");
 // mySound.play();
 
 
@@ -322,7 +322,7 @@ function prevMusic(){
 
 let songLength = 0; //in seconds
 let percentage = 0;
-let progressBar = document.querySelector('.progress-bar__actif');
+// let progressBar = document.querySelector('.sliderMusic__el--show .progress-bar__actif');
 
 function calculateTime(songLength, percentage) {
   //time
@@ -347,71 +347,72 @@ let playRunner;
 btnMusicPlay.addEventListener('click', (e) =>{
 
   let soundLi = document.querySelector('.sliderMusic__el--show');
+  let progressBar = document.querySelector('.sliderMusic__el--show .progress-bar__actif');
 
   if (!document.querySelector('.myAudio')) {
     if (soundLi.classList.contains('sound1')) {
       songLength = 238;
-      mySound = new sound("../assets/sound/Aha.mp3");
+      mySound = new sound("assets/sound/Aha.mp3");
       mySound.play(); 
     }
     else if (soundLi.classList.contains('sound2')) {
       songLength = 313;
-      mySound = new sound("../assets/sound/Carol_of_the_Bells.mp3");
+      mySound = new sound("assets/sound/Carol_of_the_Bells.mp3");
       mySound.play(); 
     }
     else if (soundLi.classList.contains('sound3')) {
       songLength = 455;
-      mySound = new sound("../assets/sound/Daft_Punk.mp3");
+      mySound = new sound("assets/sound/Daft_Punk.mp3");
       mySound.play(); 
     }
     else if (soundLi.classList.contains('sound4')) {
       songLength = 410;
-      mySound = new sound("../assets/sound/La_La_Latch.mp3");
+      mySound = new sound("assets/sound/La_La_Latch.mp3");
       mySound.play(); 
     }
     else if (soundLi.classList.contains('sound5')) {
       songLength = 207;
-      mySound = new sound("../assets/sound/Dance_of_the_Sugar_Plum_Fairy.mp3");
+      mySound = new sound("assets/sound/Dance_of_the_Sugar_Plum_Fairy.mp3");
       mySound.play(); 
     }
     else if (soundLi.classList.contains('sound6')) {
       songLength = 235;
-      mySound = new sound("../assets/sound/Na_Na_Na.mp3");
+      mySound = new sound("assets/sound/Na_Na_Na.mp3");
       mySound.play(); 
     }
     else if (soundLi.classList.contains('sound7')) {
       songLength = 256;
-      mySound = new sound("../assets/sound/God_Rest_Ye_Merry_Gentlemen.mp3");
+      mySound = new sound("assets/sound/God_Rest_Ye_Merry_Gentlemen.mp3");
       mySound.play(); 
     }
     else if (soundLi.classList.contains('sound8')) {
       songLength = 319;
-      mySound = new sound("../assets/sound/Despacito_x_Shape_Of_You.mp3");
+      mySound = new sound("assets/sound/Despacito_x_Shape_Of_You.mp3");
       mySound.play(); 
     }
     else if (soundLi.classList.contains('sound9')) {
       songLength = 159;
-      mySound = new sound("../assets/sound/Waltz_of_the_Flowers.mp3");
+      mySound = new sound("assets/sound/Waltz_of_the_Flowers.mp3");
       mySound.play(); 
     }
     else if (soundLi.classList.contains('sound10')) {
       songLength = 413;
-      mySound = new sound("../assets/sound/Little_Drummer_Boy.mp3");
+      mySound = new sound("assets/sound/Little_Drummer_Boy.mp3");
       mySound.play(); 
     }
     else if (soundLi.classList.contains('sound11')) {
       songLength = 317;
-      mySound = new sound("../assets/sound/Dreams.mp3");
+      mySound = new sound("assets/sound/Dreams.mp3");
       mySound.play(); 
     }
     else if (soundLi.classList.contains('sound12')) {
       songLength = 240;
-      mySound = new sound("../assets/sound/Once_Upon_a_December.mp3");
+      mySound = new sound("assets/sound/Once_Upon_a_December.mp3");
       mySound.play(); 
     }
     else if (soundLi.classList.contains('sound13')) {
       songLength = 348;
-      mySound = new sound("../assets/sound/Be_My_Eyes.mp3");
+      mySound = new sound("assets/sound/Be_My_Eyes.mp3");
       mySound.play(); 
     }
 
